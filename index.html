@@ -37,7 +37,7 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-      <a class="btn-getstarted" href="index.html#about">Donate Now</a>
+      <a class="btn-getstarted" href="index.html#myTabContent">Donate Now</a>
     </div>
   </header>
 
@@ -56,15 +56,15 @@
             </div>
           </div>
           <div class="col-6 col-hero-form">
-            <div class="card-form">
+            <div class="card-form" id="cardForm">
               <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                   <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1"
                     type="button" role="tab" aria-controls="tab1" aria-selected="true">Give Monthly</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button"
-                    role="tab" aria-controls="tab2" aria-selected="false">Give Once</button>
+                  <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button"
+                    role="tab" aria-controls="tab1" aria-selected="false">Give Once</button>
                 </li>
               </ul>
 
@@ -72,42 +72,21 @@
               <div class="tab-content donate-form mt-3" id="myTabContent">
                 <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
                   <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-primary selected-donation">₹800</button>
-                    <button type="button" class="btn btn-primary">₹1000</button>
-                    <button type="button" class="btn btn-primary">₹1500</button>
-                    <button type="button" class="btn btn-primary">OTHER</button>
+                    <button type="button" class="btn btn-primary" data-amount="800">₹800</button>
+                    <button type="button" class="btn btn-primary" data-amount="1000">₹1000</button>
+                    <button type="button" class="btn btn-primary" data-amount="1500">₹1500</button>
+                    <button type="button" class="btn btn-primary" id="otherButton">OTHER</button>
                   </div>
-
-                  <h5 class="text-center">₹800 per month</h5>
-                  <label class="mb-2">Mode of Donation</label>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radioTab1" id="radio1-tab1" checked>
-                    <label class="form-check-label" for="radio1-tab1">
-                      Bank Account
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="radioTab1" id="radio2-tab1">
-                    <label class="form-check-label" for="radio2-tab1">
-                      UPI
-                    </label>
-                  </div>
-                  <button type="button" class="btn btn-primary w-100 my-4 btn-submit">NEXT</button>
-
-                </div>
-                <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-                  <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-primary ">₹800</button>
-                    <button type="button" class="btn btn-primary">₹1000</button>
-                    <button type="button" class="btn btn-primary">₹1500</button>
-                    <button type="button" class="btn btn-primary selected-donation">OTHER</button>
-                  </div>
-                  <form>
+                  
+                  <h5 id="amountText" class="text-center">₹800 per month</h5>
+                  
+                  <form id="otherAmountForm" style="display:none;">
                     <div class="mb-3">
-                      <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Your Amount Here">
-                      <div id="errorMessage" class="form-text text-danger">This is a Error message.</div>
+                      <input type="number" class="form-control" id="exampleInputText" placeholder="Enter Your Amount Here" />
+                      <!-- <div id="errorMessage" class="form-text text-danger">This is an error message.</div> -->
                     </div>
                   </form>
+
                   <label class="mb-2">Mode of Donation</label>
                   <div class="form-check">
                     <input class="form-check-input" type="radio" name="radioTab1" id="radio1-tab1" checked>
@@ -121,8 +100,9 @@
                       UPI
                     </label>
                   </div>
-                  <button type="button" class="btn btn-primary w-100 my-4 btn-submit">NEXT</button>
+                  <button type="button" id="nextButton" class="btn btn-primary w-100 my-4 btn-submit">NEXT</button>
                 </div>
+             
               </div>
 
             </div>
@@ -167,7 +147,7 @@
       <p>For 75 years, we have been working relentlessly to safeguard their rights and growth. We work closely with the
         Government of India and our partners to improve the lives of the most vulnerable children with long-lasting
         interventions.</p>
-      <button type="button" class="btn btn-primary btn-community">Join our community</button>
+      <a href="index.html#cardForm" class="btn btn-primary btn-community" > Join our community</a>
     </section>
     <!-- /join out community  -->
 
@@ -411,6 +391,54 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.btn-group .btn');
+    const amountText = document.getElementById('amountText');
+    const otherAmountForm = document.getElementById('otherAmountForm');
+    function handleButtonClick(button) {
+      buttons.forEach(btn => btn.classList.remove('active'));
+      if (button.id === 'otherButton') {
+        amountText.style.display = 'none';
+        otherAmountForm.style.display = 'block';
+      } else {
+        amountText.style.display = 'block';
+        otherAmountForm.style.display = 'none';
+        amountText.textContent = `${button.textContent} per month`;
+      }
+      button.classList.add('active');
+    }
+    buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        handleButtonClick(this);
+      });
+    });
+
+    const firstButton = buttons[0];
+    handleButtonClick(firstButton);
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const getStartedButton = document.querySelector('.btn-getstarted');
+    const cardForm = document.getElementById('cardForm');
+
+    getStartedButton.addEventListener('click', function(e) {
+      e.preventDefault(); 
+      cardForm.classList.add('active-card');
+      cardForm.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    cardForm.addEventListener('mouseleave', function() {
+      cardForm.classList.remove('active-card');
+    });
+  });
+
+  const nextButton = document.getElementById('nextButton');
+    nextButton.addEventListener('click', function() {
+      window.location.href = 'payment-form.html'; 
+    });
+  </script>
 
 </body>
 

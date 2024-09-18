@@ -607,8 +607,7 @@ p {
 /* hero section */
 
 .hero {
-  margin-top: 86px;
-  padding-top: 38px;
+  padding-top: 124px;
   display: block;
 }
 
@@ -1304,3 +1303,27 @@ section.about-us h2 {
     justify-content: center !important;
   }
 }
+
+/* payment page */
+
+.error-message {
+  color: red;
+  font-size: 0.875em;
+}
+.thank-you-message {
+  display: none;
+  color: green;
+  font-size: 1.25em;
+}
+
+/* Extra css */
+
+.btn-group .btn.active {
+  background-color: var(--secondary-color); 
+  color: white;
+}
+
+.card-form:hover, .active-card {
+  border: 2px solid var(--secondary-color);
+}
+

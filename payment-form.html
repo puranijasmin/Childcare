@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Demo Practice</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid d-mobile container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center" title="Logo">
+        <img src="assets/img/logo.png" alt="">
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#experiences">Experiences</a></li>
+          <li><a href="index.html#community">Join Our Community</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="index.html#myTabContent">Donate Now</a>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- about section  -->
+    <section class=" about-us" id="about" >
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <h2 class="text-center mb-4">Fill the form for Donation </h2>
+            <form id="paymentForm">
+              <!-- Card Details -->
+              <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" class="form-control" id="cardNumber" placeholder="Enter your card number">
+                <div id="cardNumberError" class="error-message"></div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="expiryDate">Expiration Date</label>
+                    <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY">
+                    <div id="expiryDateError" class="error-message"></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" class="form-control" id="cvv" placeholder="CVV">
+                    <div id="cvvError" class="error-message"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Billing Address -->
+              <h4 class="mt-4 mb-3">Billing Address</h4>
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+                <div id="fullNameError" class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" placeholder="Enter your address">
+                <div id="addressError" class="error-message"></div>
+              </div>
+              <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city" placeholder="Enter your city">
+                <div id="cityError" class="error-message"></div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" class="form-control" id="state" placeholder="Enter your state">
+                    <div id="stateError" class="error-message"></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="zip">ZIP Code</label>
+                    <input type="text" class="form-control" id="zip" placeholder="Enter your ZIP code">
+                    <div id="zipError" class="error-message"></div>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Submit Payment</button>
+            </form>
+            <div id="thankYouMessage" class="thank-you-message text-center mt-4">
+              Thank you for your payment!
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /about section -->
+  </main>
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container text-center">
+      <a href="index.html" class="logo-footer d-inline-block">
+        <img src="assets/img/logo.png" alt="footer-logo">
+      </a>
+      <div class="copyright mt-4 d-flex justify-content-between">
+        <p>© Copyright demo design - jasmin purani</p>
+        <ul class="terms-condition">
+          <li><a href="index.html#about">Terms of Service</a></li>
+          <li><a href="index.html#features">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('paymentForm');
+      const thankYouMessage = document.getElementById('thankYouMessage');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault(); 
+        document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+
+        let isValid = true;
+        ['cardNumber', 'expiryDate', 'cvv', 'fullName', 'address', 'city', 'state', 'zip'].forEach(id => {
+          const input = document.getElementById(id);
+          const errorDiv = document.getElementById(id + 'Error');
+          if (!input.value.trim()) {
+            isValid = false;
+            errorDiv.textContent = 'This field is required';
+          }
+        });
+        if (isValid) {
+          form.style.display = 'none'; // Hide the form
+          thankYouMessage.style.display = 'block'; // Show thank you message
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
