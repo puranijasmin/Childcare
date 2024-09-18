@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Demo Practice</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid d-mobile container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center" title="Logo">
+        <img src="assets/img/logo.png" alt="">
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#experiences">Experiences</a></li>
+          <li><a href="index.html#community">Join Our Community</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="index.html#about">Donate Now</a>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="row hero-content">
+          <div class="col-6 col-hero-content">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <h1 data-aos="fade-up">Fill your heart and children lives with the<span> joy of giving</span></h1>
+
+              <img src="assets/img/hero-banner.png" class="img-fluid hero-img" alt="" data-aos="zoom-out"
+                data-aos-delay="300">
+            </div>
+          </div>
+          <div class="col-6 col-hero-form">
+            <div class="card-form">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1"
+                    type="button" role="tab" aria-controls="tab1" aria-selected="true">Give Monthly</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button"
+                    role="tab" aria-controls="tab2" aria-selected="false">Give Once</button>
+                </li>
+              </ul>
+
+              <!-- Tab content -->
+              <div class="tab-content donate-form mt-3" id="myTabContent">
+                <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary selected-donation">₹800</button>
+                    <button type="button" class="btn btn-primary">₹1000</button>
+                    <button type="button" class="btn btn-primary">₹1500</button>
+                    <button type="button" class="btn btn-primary">OTHER</button>
+                  </div>
+
+                  <h5 class="text-center">₹800 per month</h5>
+                  <label class="mb-2">Mode of Donation</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioTab1" id="radio1-tab1" checked>
+                    <label class="form-check-label" for="radio1-tab1">
+                      Bank Account
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioTab1" id="radio2-tab1">
+                    <label class="form-check-label" for="radio2-tab1">
+                      UPI
+                    </label>
+                  </div>
+                  <button type="button" class="btn btn-primary w-100 my-4 btn-submit">NEXT</button>
+
+                </div>
+                <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary ">₹800</button>
+                    <button type="button" class="btn btn-primary">₹1000</button>
+                    <button type="button" class="btn btn-primary">₹1500</button>
+                    <button type="button" class="btn btn-primary selected-donation">OTHER</button>
+                  </div>
+                  <form>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" id="exampleInputText" placeholder="Enter Your Amount Here">
+                      <div id="errorMessage" class="form-text text-danger">This is a Error message.</div>
+                    </div>
+                  </form>
+                  <label class="mb-2">Mode of Donation</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioTab1" id="radio1-tab1" checked>
+                    <label class="form-check-label" for="radio1-tab1">
+                      Bank Account
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioTab1" id="radio2-tab1">
+                    <label class="form-check-label" for="radio2-tab1">
+                      UPI
+                    </label>
+                  </div>
+                  <button type="button" class="btn btn-primary w-100 my-4 btn-submit">NEXT</button>
+                </div>
+              </div>
+
+            </div>
+            <img src="assets/img/hero-banner.png" class="img-fluid hero-img hero-img-mobile" alt="" data-aos="zoom-out"
+                data-aos-delay="300">
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- about section  -->
+    <section class="container about-us" id="about" >
+      <span> - Know More -</span>
+      <h2 data-aos="fade-up">Your act of kindness <span>bring hope</span> to children and joy of giving to you</h2>
+      <p>When we give and share, we make our lives more fulfilling. When we help others for a better life, we feel the
+        inner joy that stays with us lifelong. We invite you to join our family of donors and experience the joy of
+        giving by helping vulnerable children overcome the challenges in their lives.</p>
+    </section>
+    <!-- /about section -->
+
+    <!-- experience section -->
+    <section class="experience-section" id="experiences">
+      <div class="top-curved"></div>
+      <div class="container">
+        <h2 data-aos="fade-up">Experience </br> the <span>joy of giving</span></h2>
+        <a href="https://www.youtube.com/watch?v=v7lg-XdncnE" title=""
+          class="glightbox btn-watch-video d-flex align-items-center"> <img src="assets/img/video.jpg" class="video-img"
+            alt=""> <img src="assets/img/player.png" class="video-player" alt=""></a>
+      </div>
+    </section>
+    <!-- /experience section -->
+
+    <!-- join out community  -->
+    <section class="container community" id="community">
+      <h2 data-aos="fade-up">You help us make </br>
+        <span>a better world</span> for every child.
+      </h2>
+      <p>UNICEF has been providing children, and their families, essential and urgent support towards more fulfilling
+        lives. Our community of supporters, like yourself, has been an integral part of this joyful journey of giving
+        children the best start in life.</p>
+      <p>For 75 years, we have been working relentlessly to safeguard their rights and growth. We work closely with the
+        Government of India and our partners to improve the lives of the most vulnerable children with long-lasting
+        interventions.</p>
+      <button type="button" class="btn btn-primary btn-community">Join our community</button>
+    </section>
+    <!-- /join out community  -->
+
+
+    <!-- Our Work Section -->
+    <section id="ourwork" class="ourwork light-background">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper ourwork-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 60000,
+              "autoplay": {
+                "delay": 50000000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="ourwork-item d-flex align-items-center">
+                <div class="ourwork-img-container">
+                  <img src="assets/img/frame-img.png"  class="frame-img" alt="ourwork img">
+                  <div class="ourwork-img">
+                    <img src="assets/img/ourwork.webp" alt="ourwork img">
+                  </div>
+                </div>
+                <div class="ourwork-content" data-aos="fade-right">
+                  <h3>“The joy of giving provides safe and protective environment for children to grow.”</h3>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="ourwork-item d-flex align-items-center">
+                <div class="ourwork-img-container">
+                  <img src="assets/img/frame-img.png"  class="frame-img" alt="ourwork img">
+                  <div class="ourwork-img">
+                    <img src="assets/img/ourwork.webp" alt="ourwork img">
+                  </div>
+                </div>
+                <div class="ourwork-content" data-aos="fade-right">
+                  <h3>“The joy of giving provides safe and protective environment for children to grow.”</h3>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="ourwork-item d-flex align-items-center">
+                <div class="ourwork-img-container">
+                  <img src="assets/img/frame-img.png"  class="frame-img" alt="ourwork img">
+                  <div class="ourwork-img">
+                    <img src="assets/img/ourwork.webp" alt="ourwork img">
+                  </div>
+                </div>
+                <div class="ourwork-content" data-aos="fade-right">
+                  <h3>“The joy of giving provides safe and protective environment for children to grow.”</h3>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="text-center">Donors share their experience of the <span>joy of giving</span>. </h2>
+      </div>
+
+      <div class="swiper testimonials-swiper" class="container" data-aos="fade-up" data-aos-delay="100">
+        <!-- Swiper configuration -->
+        <script type="application/json" class="swiper-config">
+          {
+            "loop": true,
+            "speed": 600,
+            "autoplay": {
+              "delay": 5000
+            },
+            "slidesPerView": 2.5,
+            "centeredSlides": true,
+            "pagination": {
+              "el": ".swiper-pagination",
+              "type": "bullets",
+              "clickable": true
+            },
+            "breakpoints": {
+              "320": {
+                "slidesPerView": 1,
+                "spaceBetween": 1
+              },
+              "1023": {
+                "slidesPerView": 2.5,
+                "spaceBetween": 40
+              }
+            }
+          }
+        </script>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile">
+                <img src="assets/img/testimonial-img-1.png" class="profile-img" alt="testimoial-img">
+              </div>
+              <p>
+                Children are vulnerable and therefore they need utmost care and above all protection! Let us eradicate
+                exploitation and do whatever it takes to make the lives of our Children beautiful, just like they are! I
+                am glad I donate to UNICEF and have two additional children besides my biological ones. The money
+                donated means nothing absolutely nothing to me, but the well-being of my foster kids means the world to
+                me. I love you, my babies! May you always be protected and nurtured! Keep up the good work Unicef and
+                may you continue to make a positive difference to our Children! I urge all to give whatever you can for
+                it is in GIVING that we RECEIVE!
+              </p>
+              <div class="profile-content mt-auto">
+                <h3>Mridula Research Scholar</h3>
+                <h6>IIT Madras</h6>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile">
+                <img src="assets/img/testimonial-img-2.png" class="profile-img" alt="testimoial-img">
+              </div>
+              <p>
+                Children are vulnerable and therefore they need utmost care and above all protection! Let us eradicate
+                exploitation and do whatever it takes to make the lives of our Children beautiful, just like they are! I
+                am glad I donate to UNICEF and have two additional children besides my biological ones. The money
+                donated means nothing absolutely nothing to me, but the well-being of my foster kids means the world to
+                me. I love you, my babies! May you always be protected and nurtured! Keep up the good work Unicef and
+                may you continue to make a positive difference to our Children! I urge all to give whatever you can for
+                it is in GIVING that we RECEIVE!
+              </p>
+              <div class="profile-content mt-auto">
+                <h3>Sumita R Almeida</h3>
+                <h6>Monedo Financial Services Pvt Ltd</h6>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile">
+                <img src="assets/img/testimonial-img-3.png" class="profile-img" alt="testimoial-img">
+              </div>
+              <p>
+                Children are vulnerable and therefore they need utmost care and above all protection! Let us eradicate
+                exploitation and do whatever it takes to make the lives of our Children beautiful, just like they are! I
+                am glad I donate to UNICEF and have two additional children besides my biological ones. The money
+                donated means nothing absolutely nothing to me, but the well-being of my foster kids means the world to
+                me. I love you, my babies! May you always be protected and nurtured! Keep up the good work Unicef and
+                may you continue to make a positive difference to our Children! I urge all to give whatever you can for
+                it is in GIVING that we RECEIVE!
+              </p>
+              <div class="profile-content mt-auto">
+                <h3>Kasiviswanathan Mangudi</h3>
+                <h6>Executive</h6>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="profile">
+                <img src="assets/img/testimonial-img-2.png" class="profile-img" alt="testimoial-img">
+              </div>
+              <p>
+                Children are vulnerable and therefore they need utmost care and above all protection! Let us eradicate
+                exploitation and do whatever it takes to make the lives of our Children beautiful, just like they are! I
+                am glad I donate to UNICEF and have two additional children besides my biological ones. The money
+                donated means nothing absolutely nothing to me, but the well-being of my foster kids means the world to
+                me. I love you, my babies! May you always be protected and nurtured! Keep up the good work Unicef and
+                may you continue to make a positive difference to our Children! I urge all to give whatever you can for
+                it is in GIVING that we RECEIVE!
+              </p>
+              <div class="profile-content mt-auto">
+                <h3>Sumita R Almeida</h3>
+                <h6>Monedo Financial Services Pvt Ltd</h6>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+      </div>
+      <img src="assets/img/divider.png" class="hr" alt="hr-line">
+
+    </section>
+
+    <script>
+      var ourWorkSwiper = new Swiper('.ourwork-swiper', JSON.parse(document.querySelector('.ourwork .swiper-config')
+        .textContent));
+      var testimonialsSwiper = new Swiper('.testimonials-swiper', JSON.parse(document.querySelector(
+        '.testimonials .swiper-config').textContent));
+    </script>
+
+
+  </main>
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container text-center">
+      <a href="index.html" class="logo-footer d-inline-block">
+        <img src="assets/img/logo.png" alt="footer-logo">
+      </a>
+      <div class="copyright mt-4 d-flex justify-content-between">
+        <p>© Copyright demo design - jasmin purani</p>
+        <ul class="terms-condition">
+          <li><a href="index.html#about">Terms of Service</a></li>
+          <li><a href="index.html#features">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize the "Our Work" Swiper
+    var ourWorkSwiper = new Swiper('.ourwork-swiper', JSON.parse(document.querySelector('.ourwork .swiper-config')
+      .textContent));
+
+    // Initialize the "Testimonials" Swiper
+    var testimonialsSwiper = new Swiper('.testimonials-swiper', JSON.parse(document.querySelector(
+      '.testimonials .swiper-config').textContent));
+  </script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
